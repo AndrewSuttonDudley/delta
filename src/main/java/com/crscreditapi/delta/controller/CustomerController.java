@@ -26,4 +26,9 @@ public class CustomerController {
     public List<CustomerDto> findAll() {
         return customerMapper.list(customerService.findAll());
     }
+
+    @GetMapping("test")
+    public String test() {
+        return "Great success!!";
+    }
 }
