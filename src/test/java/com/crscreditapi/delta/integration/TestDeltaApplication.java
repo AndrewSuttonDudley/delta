@@ -1,5 +1,6 @@
-package com.crscreditapi.delta;
+package com.crscreditapi.delta.integration;
 
+import com.crscreditapi.delta.DeltaApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;

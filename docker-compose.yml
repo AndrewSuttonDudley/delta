@@ -12,14 +12,15 @@ services:
     networks:
       - delta-network
 
-#  delta:
+  delta:
+    build: .
 #    image: 'sleepyheadlabs-delta:latest'
-#    environment:
-#      - 'spring.datasource.url=jdbc:postgresql://postgres/delta?user=delta&password=delta'
-#    ports:
-#      - '8080:8080'
-#    networks:
-#      - delta-network
+    environment:
+      - 'spring.datasource.url=jdbc:postgresql://postgres/delta?user=delta&password=delta'
+    ports:
+      - '8080:8080'
+    networks:
+      - delta-network
 
 networks:
   delta-network:
