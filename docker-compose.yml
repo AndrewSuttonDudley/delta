@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  postgres:
+    image: 'postgres:15.3'
+    environment:
+      - 'POSTGRES_USER=delta'
+      - 'POSTGRES_DB=delta'
+      - 'POSTGRES_PASSWORD=delta'
+    ports:
+      - '5432:5432'
+    networks:
+      - delta-network
+
+#  delta:
+#    image: 'sleepyheadlabs-delta:latest'
+#    environment:
+#      - 'spring.datasource.url=jdbc:postgresql://postgres/delta?user=delta&password=delta'
+#    ports:
+#      - '8080:8080'
+#    networks:
+#      - delta-network
+
+networks:
+  delta-network:

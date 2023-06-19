@@ -12,11 +12,10 @@ public class TestDeltaApplication {
     @Bean
     @ServiceConnection
     PostgreSQLContainer<?> postgresContainer() {
-        return new PostgreSQLContainer<>("postgres:latest");
+        return new PostgreSQLContainer<>("postgres:15.3");
     }
 
     public static void main(String[] args) {
         SpringApplication.from(DeltaApplication::main).with(TestDeltaApplication.class).run(args);
     }
-
 }
