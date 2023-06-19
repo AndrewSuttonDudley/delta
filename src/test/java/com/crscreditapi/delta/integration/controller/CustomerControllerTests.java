@@ -18,6 +18,6 @@ public class CustomerControllerTests {
 
     @Test
     public void testFindAll() {
-        assertEquals("Hello, World!", customerController.findAll());
+        assertTrue(customerController.findAll().size() > 0);
     }
 }
